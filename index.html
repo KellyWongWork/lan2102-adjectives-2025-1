@@ -1,0 +1,792 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adjective Flashcards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+        .flashcard {
+            width: 250px;
+            height: 180px;
+            margin: 10px;
+            perspective: 1000px;
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        .flashcard:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .card-back {
+            transform: rotateY(180deg);
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Additional</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Additional&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Extra or added.</p>
+                <p><strong>Translation:</strong> 附加的、額外的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Affordable</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Affordable&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Reasonably priced; not too expensive.</p>
+                <p><strong>Translation:</strong> 價格實惠的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Appealing</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Appealing&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Attractive or interesting.</p>
+                <p><strong>Translation:</strong> 吸引人的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Attractive</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Attractive&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Pleasing or appealing to the senses.</p>
+                <p><strong>Translation:</strong> 有吸引力的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Boring</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Boring&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Not interesting; dull.</p>
+                <p><strong>Translation:</strong> 乏味的、沉悶的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Common</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Common&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Occurring frequently; usual.</p>
+                <p><strong>Translation:</strong> 普通的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Convenient</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Convenient&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Fitting in well with a person's needs or plans.</p>
+                <p><strong>Translation:</strong> 方便的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Cost-effective</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Cost-effective&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Providing good value for the amount paid.</p>
+                <p><strong>Translation:</strong> 經濟實惠的、具經濟效益的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Cost-efficient</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Cost-efficient&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Achieving maximum productivity with minimum expense.</p>
+                <p><strong>Translation:</strong> 經濟高效的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Costly</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Costly&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Expensive; involving great expense.</p>
+                <p><strong>Translation:</strong> 昂貴的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Cost-saving</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Cost-saving&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Reducing expenses.</p>
+                <p><strong>Translation:</strong> 省錢的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Difficult</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Difficult&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Not easy; requiring effort.</p>
+                <p><strong>Translation:</strong> 困難的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Eco-friendly</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Eco-friendly&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Not harmful to the environment.</p>
+                <p><strong>Translation:</strong> 環保的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Effective</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Effective&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Successful in producing a desired result.</p>
+                <p><strong>Translation:</strong> 有效的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Enjoyable</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Enjoyable&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Giving pleasure or satisfaction.</p>
+                <p><strong>Translation:</strong> 令人愉快的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Enough</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Enough&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> As much or as many as required.</p>
+                <p><strong>Translation:</strong> 足夠的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Environmental</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Environmental&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Relating to the natural world.</p>
+                <p><strong>Translation:</strong> 環保的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Exciting</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Exciting&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Causing great enthusiasm and eagerness.</p>
+                <p><strong>Translation:</strong> 令人興奮的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Expensive</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Expensive&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Costing a lot of money.</p>
+                <p><strong>Translation:</strong> 昂貴的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Extra</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Extra&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> More than is usual or necessary.</p>
+                <p><strong>Translation:</strong> 額外的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Eye-catching</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Eye-catching&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Immediately appealing or noticeable.</p>
+                <p><strong>Translation:</strong> 引人注目的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Hard</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Hard&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Difficult to do or understand.</p>
+                <p><strong>Translation:</strong> 困難的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Helpful</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Helpful&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Providing assistance or support.</p>
+                <p><strong>Translation:</strong> 有用的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Impractical</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Impractical&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Not sensible or realistic.</p>
+                <p><strong>Translation:</strong> 不實用的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Impressive</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Impressive&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Evoking admiration through size, quality, or skill.</p>
+                <p><strong>Translation:</strong> 令人印象深刻的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Inadequate</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Inadequate&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Not sufficient or suitable.</p>
+                <p><strong>Translation:</strong> 不足的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Ineffective</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Ineffective&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Not producing the desired effect.</p>
+                <p><strong>Translation:</strong> 無效的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Inexpensive</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Inexpensive&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Low in price; not costly.</p>
+                <p><strong>Translation:</strong> 便宜的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Insufficient</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Insufficient&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Not enough; inadequate.</p>
+                <p><strong>Translation:</strong> 不足的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Interactive</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Interactive&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Allowing communication between people or devices.</p>
+                <p><strong>Translation:</strong> 有互動性的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Interesting</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Interesting&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Holding attention; engaging.</p>
+                <p><strong>Translation:</strong> 有趣的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Meaningful</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Meaningful&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Having significance or purpose.</p>
+                <p><strong>Translation:</strong> 有意義的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Money-saving</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Money-saving&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Helping to reduce spending.</p>
+                <p><strong>Translation:</strong> 省錢的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Negative</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Negative&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Not desirable or optimistic.</p>
+                <p><strong>Translation:</strong> 負面的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Old-fashioned</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Old-fashioned&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Outdated or not modern.</p>
+                <p><strong>Translation:</strong> 過時的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Outstanding</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Outstanding&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Exceptionally good.</p>
+                <p><strong>Translation:</strong> 傑出的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Overpriced</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Overpriced&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Too expensive for its value.</p>
+                <p><strong>Translation:</strong> 價格過高的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Popular</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Popular&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Liked or admired by many people.</p>
+                <p><strong>Translation:</strong> 流行的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Practical</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Practical&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Useful and sensible.</p>
+                <p><strong>Translation:</strong> 實用的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Pricey</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Pricey&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Expensive.</p>
+                <p><strong>Translation:</strong> 昂貴的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Promotional</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Promotional&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Related to advertising or marketing.</p>
+                <p><strong>Translation:</strong> 可促銷的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Sharable</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Sharable&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Able to be shared.</p>
+                <p><strong>Translation:</strong> 可分享的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Simple</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Simple&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Easy to understand or do.</p>
+                <p><strong>Translation:</strong> 簡單的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Special</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Special&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Different from what is usual; unique.</p>
+                <p><strong>Translation:</strong> 特別的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Suitable</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Suitable&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Appropriate for a particular purpose.</p>
+                <p><strong>Translation:</strong> 合適的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Time-consuming</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Time-consuming&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Taking a lot of time.</p>
+                <p><strong>Translation:</strong> 耗時的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Timeless</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Timeless&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Not affected by the passage of time.</p>
+                <p><strong>Translation:</strong> 永恆的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Time-saving</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Time-saving&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Reducing the amount of time needed.</p>
+                <p><strong>Translation:</strong> 省時的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Traditional</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Traditional&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Based on customs or beliefs.</p>
+                <p><strong>Translation:</strong> 傳統的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Unaffordable</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Unaffordable&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Too expensive to be bought.</p>
+                <p><strong>Translation:</strong> 價格昂貴的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Unappealing</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Unappealing&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Not attractive or interesting.</p>
+                <p><strong>Translation:</strong> 不吸引人的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Unattractive</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Unattractive&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Not pleasing to look at.</p>
+                <p><strong>Translation:</strong> 沒有吸引力的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Uninteresting</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Uninteresting&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Not engaging or exciting.</p>
+                <p><strong>Translation:</strong> 無趣的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Unsurprising</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Unsurprising&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Expected; not surprising.</p>
+                <p><strong>Translation:</strong> 無驚喜的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Useful</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Useful&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Able to be used for a practical purpose.</p>
+                <p><strong>Translation:</strong> 有用的</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flashcard">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Useless</h2>
+                <button onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Useless&type=2')">🔊</button>
+            </div>
+            <div class="card-back">
+                <p><strong>Definition:</strong> Not fulfilling any purpose.</p>
+                <p><strong>Translation:</strong> 無用的</p>
+            </div>
+        </div>
+    </div>
+    
+<script>
+    function playAudio(url) {
+        const audio = new Audio(url);
+        audio.play();
+    }
+</script>
+</body>
+</html>
