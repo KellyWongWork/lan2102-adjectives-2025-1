@@ -1,0 +1,903 @@
+LAN2102 Vocabulary – Adjectives Flashcard App (HTML Code)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LAN2102 Vocabulary – Adjectives</title>
+<style>
+body { font-family: Arial, sans-serif; background-color: #f0f0f0; margin: 0; padding: 20px; }
+.tab-buttons { display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 20px; }
+.tab-buttons button { margin: 5px; padding: 10px 20px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; }
+.tab-buttons button:hover { opacity: 0.8; }
+.card-container { display: none; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; justify-content: center; }
+.card { width: 250px; height: 200px; margin: 10px; perspective: 1000px; }
+.card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.8s; transform-style: preserve-3d; }
+.card.flipped .card-inner { transform: rotateY(180deg); }
+.card-front, .card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px; }
+.card-back { transform: rotateY(180deg); }
+.listen-btn { margin-top: 10px; padding: 10px 20px; font-size: 16px; background-color: #2196F3; color: white; border: none; border-radius: 5px; cursor: pointer; }
+.listen-btn:hover { background-color: #1976D2; }
+.flip-btn { margin-top: 10px; padding: 8px 16px; font-size: 14px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+.flip-btn:hover { background-color: #388E3C; }
+.back-btn { margin-top: 10px; padding: 8px 16px; font-size: 14px; background-color: orange; color: white; border: none; border-radius: 5px; cursor: pointer; }
+.back-btn:hover { background-color: darkorange; }
+</style>
+</head>
+<body>
+<h1>LAN2102 Vocabulary – Adjectives</h1>
+<div class="tab-buttons">
+<button style="background-color:#FFCDD2" onclick="showGroup('A–D')">A–D</button>
+<button style="background-color:#F8BBD0" onclick="showGroup('E–H')">E–H</button>
+<button style="background-color:#E1BEE7" onclick="showGroup('I–N')">I–N</button>
+<button style="background-color:#D1C4E9" onclick="showGroup('O–S')">O–S</button>
+<button style="background-color:#C5CAE9" onclick="showGroup('T–Z')">T–Z</button>
+</div>
+<div class="card-container" id="A–D">
+
+        <div class="card" id="card1">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#FFCDD2">
+                    <h2>1. Additional</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Additional&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card1')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#FFCDD2">
+                    <p><strong>Translation:</strong> 附加的、額外的</p>
+                    <button class="back-btn" onclick="flipCard('card1')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card2">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#FFCDD2">
+                    <h2>2. Affordable</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Affordable&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card2')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#FFCDD2">
+                    <p><strong>Translation:</strong> 價格實惠的</p>
+                    <button class="back-btn" onclick="flipCard('card2')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card3">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#FFCDD2">
+                    <h2>3. Appealing</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Appealing&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card3')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#FFCDD2">
+                    <p><strong>Translation:</strong> 吸引人的</p>
+                    <button class="back-btn" onclick="flipCard('card3')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card4">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#FFCDD2">
+                    <h2>4. Attractive</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Attractive&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card4')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#FFCDD2">
+                    <p><strong>Translation:</strong> 有吸引力的</p>
+                    <button class="back-btn" onclick="flipCard('card4')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card5">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#FFCDD2">
+                    <h2>5. Boring</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Boring&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card5')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#FFCDD2">
+                    <p><strong>Translation:</strong> 乏味的、沉悶的</p>
+                    <button class="back-btn" onclick="flipCard('card5')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card6">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#FFCDD2">
+                    <h2>6. Common</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Common&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card6')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#FFCDD2">
+                    <p><strong>Translation:</strong> 普通的</p>
+                    <button class="back-btn" onclick="flipCard('card6')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card7">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#FFCDD2">
+                    <h2>7. Convenient</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Convenient&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card7')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#FFCDD2">
+                    <p><strong>Translation:</strong> 方便的</p>
+                    <button class="back-btn" onclick="flipCard('card7')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card8">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#FFCDD2">
+                    <h2>8. Cost-effective</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Cost-effective&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card8')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#FFCDD2">
+                    <p><strong>Translation:</strong> 經濟實惠的、具經濟效益的</p>
+                    <button class="back-btn" onclick="flipCard('card8')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card9">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#FFCDD2">
+                    <h2>9. Cost-efficient</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Cost-efficient&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card9')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#FFCDD2">
+                    <p><strong>Translation:</strong> 經濟高效的</p>
+                    <button class="back-btn" onclick="flipCard('card9')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card10">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#FFCDD2">
+                    <h2>10. Costly</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Costly&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card10')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#FFCDD2">
+                    <p><strong>Translation:</strong> 昂貴的</p>
+                    <button class="back-btn" onclick="flipCard('card10')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card11">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#FFCDD2">
+                    <h2>11. Cost-saving</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Cost-saving&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card11')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#FFCDD2">
+                    <p><strong>Translation:</strong> 省錢的</p>
+                    <button class="back-btn" onclick="flipCard('card11')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card12">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#FFCDD2">
+                    <h2>12. Difficult</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Difficult&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card12')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#FFCDD2">
+                    <p><strong>Translation:</strong> 困難的</p>
+                    <button class="back-btn" onclick="flipCard('card12')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+</div>
+<div class="card-container" id="E–H">
+
+        <div class="card" id="card13">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#F8BBD0">
+                    <h2>13. Eco-friendly</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Eco-friendly&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card13')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#F8BBD0">
+                    <p><strong>Translation:</strong> 環保的</p>
+                    <button class="back-btn" onclick="flipCard('card13')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card14">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#F8BBD0">
+                    <h2>14. Effective</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Effective&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card14')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#F8BBD0">
+                    <p><strong>Translation:</strong> 有效的</p>
+                    <button class="back-btn" onclick="flipCard('card14')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card15">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#F8BBD0">
+                    <h2>15. Enjoyable</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Enjoyable&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card15')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#F8BBD0">
+                    <p><strong>Translation:</strong> 令人愉快的</p>
+                    <button class="back-btn" onclick="flipCard('card15')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card16">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#F8BBD0">
+                    <h2>16. Enough</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Enough&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card16')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#F8BBD0">
+                    <p><strong>Translation:</strong> 足夠的</p>
+                    <button class="back-btn" onclick="flipCard('card16')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card17">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#F8BBD0">
+                    <h2>17. Environmental</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Environmental&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card17')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#F8BBD0">
+                    <p><strong>Translation:</strong> 環保的</p>
+                    <button class="back-btn" onclick="flipCard('card17')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card18">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#F8BBD0">
+                    <h2>18. Exciting</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Exciting&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card18')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#F8BBD0">
+                    <p><strong>Translation:</strong> 令人興奮的</p>
+                    <button class="back-btn" onclick="flipCard('card18')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card19">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#F8BBD0">
+                    <h2>19. Expensive</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Expensive&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card19')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#F8BBD0">
+                    <p><strong>Translation:</strong> 昂貴的</p>
+                    <button class="back-btn" onclick="flipCard('card19')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card20">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#F8BBD0">
+                    <h2>20. Extra</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Extra&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card20')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#F8BBD0">
+                    <p><strong>Translation:</strong> 額外的</p>
+                    <button class="back-btn" onclick="flipCard('card20')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card21">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#F8BBD0">
+                    <h2>21. Eye-catching</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Eye-catching&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card21')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#F8BBD0">
+                    <p><strong>Translation:</strong> 引人注目的</p>
+                    <button class="back-btn" onclick="flipCard('card21')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card22">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#F8BBD0">
+                    <h2>22. Hard</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Hard&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card22')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#F8BBD0">
+                    <p><strong>Translation:</strong> 困難的</p>
+                    <button class="back-btn" onclick="flipCard('card22')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card23">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#F8BBD0">
+                    <h2>23. Helpful</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Helpful&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card23')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#F8BBD0">
+                    <p><strong>Translation:</strong> 有用的</p>
+                    <button class="back-btn" onclick="flipCard('card23')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+</div>
+<div class="card-container" id="I–N">
+
+        <div class="card" id="card24">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#E1BEE7">
+                    <h2>24. Impractical</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Impractical&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card24')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#E1BEE7">
+                    <p><strong>Translation:</strong> 不實用的</p>
+                    <button class="back-btn" onclick="flipCard('card24')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card25">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#E1BEE7">
+                    <h2>25. Impressive</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Impressive&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card25')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#E1BEE7">
+                    <p><strong>Translation:</strong> 令人印象深刻的</p>
+                    <button class="back-btn" onclick="flipCard('card25')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card26">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#E1BEE7">
+                    <h2>26. Inadequate</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Inadequate&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card26')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#E1BEE7">
+                    <p><strong>Translation:</strong> 不足的</p>
+                    <button class="back-btn" onclick="flipCard('card26')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card27">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#E1BEE7">
+                    <h2>27. Ineffective</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Ineffective&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card27')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#E1BEE7">
+                    <p><strong>Translation:</strong> 無效的</p>
+                    <button class="back-btn" onclick="flipCard('card27')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card28">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#E1BEE7">
+                    <h2>28. Inexpensive</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Inexpensive&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card28')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#E1BEE7">
+                    <p><strong>Translation:</strong> 便宜的</p>
+                    <button class="back-btn" onclick="flipCard('card28')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card29">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#E1BEE7">
+                    <h2>29. Insufficient</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Insufficient&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card29')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#E1BEE7">
+                    <p><strong>Translation:</strong> 不足的</p>
+                    <button class="back-btn" onclick="flipCard('card29')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card30">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#E1BEE7">
+                    <h2>30. Interactive</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Interactive&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card30')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#E1BEE7">
+                    <p><strong>Translation:</strong> 有互動性的</p>
+                    <button class="back-btn" onclick="flipCard('card30')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card31">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#E1BEE7">
+                    <h2>31. Interesting</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Interesting&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card31')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#E1BEE7">
+                    <p><strong>Translation:</strong> 有趣的</p>
+                    <button class="back-btn" onclick="flipCard('card31')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card32">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#E1BEE7">
+                    <h2>32. Meaningful</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Meaningful&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card32')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#E1BEE7">
+                    <p><strong>Translation:</strong> 有意義的</p>
+                    <button class="back-btn" onclick="flipCard('card32')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card33">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#E1BEE7">
+                    <h2>33. Money-saving</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Money-saving&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card33')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#E1BEE7">
+                    <p><strong>Translation:</strong> 省錢的</p>
+                    <button class="back-btn" onclick="flipCard('card33')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card34">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#E1BEE7">
+                    <h2>34. Negative</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Negative&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card34')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#E1BEE7">
+                    <p><strong>Translation:</strong> 負面的</p>
+                    <button class="back-btn" onclick="flipCard('card34')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+</div>
+<div class="card-container" id="O–S">
+
+        <div class="card" id="card35">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#D1C4E9">
+                    <h2>35. Old-fashioned</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Old-fashioned&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card35')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#D1C4E9">
+                    <p><strong>Translation:</strong> 過時的</p>
+                    <button class="back-btn" onclick="flipCard('card35')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card36">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#D1C4E9">
+                    <h2>36. Outstanding</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Outstanding&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card36')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#D1C4E9">
+                    <p><strong>Translation:</strong> 傑出的</p>
+                    <button class="back-btn" onclick="flipCard('card36')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card37">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#D1C4E9">
+                    <h2>37. Overpriced</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Overpriced&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card37')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#D1C4E9">
+                    <p><strong>Translation:</strong> 價格過高的</p>
+                    <button class="back-btn" onclick="flipCard('card37')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card38">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#D1C4E9">
+                    <h2>38. Popular</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Popular&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card38')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#D1C4E9">
+                    <p><strong>Translation:</strong> 流行的</p>
+                    <button class="back-btn" onclick="flipCard('card38')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card39">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#D1C4E9">
+                    <h2>39. Practical</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Practical&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card39')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#D1C4E9">
+                    <p><strong>Translation:</strong> 實用的</p>
+                    <button class="back-btn" onclick="flipCard('card39')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card40">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#D1C4E9">
+                    <h2>40. Pricey</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Pricey&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card40')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#D1C4E9">
+                    <p><strong>Translation:</strong> 昂貴的</p>
+                    <button class="back-btn" onclick="flipCard('card40')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card41">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#D1C4E9">
+                    <h2>41. Promotional</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Promotional&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card41')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#D1C4E9">
+                    <p><strong>Translation:</strong> 可促銷的</p>
+                    <button class="back-btn" onclick="flipCard('card41')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card42">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#D1C4E9">
+                    <h2>42. Sharable</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Sharable&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card42')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#D1C4E9">
+                    <p><strong>Translation:</strong> 可分享的</p>
+                    <button class="back-btn" onclick="flipCard('card42')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card43">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#D1C4E9">
+                    <h2>43. Simple</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Simple&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card43')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#D1C4E9">
+                    <p><strong>Translation:</strong> 簡單的</p>
+                    <button class="back-btn" onclick="flipCard('card43')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card44">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#D1C4E9">
+                    <h2>44. Special</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Special&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card44')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#D1C4E9">
+                    <p><strong>Translation:</strong> 特別的</p>
+                    <button class="back-btn" onclick="flipCard('card44')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card45">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#D1C4E9">
+                    <h2>45. Suitable</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Suitable&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card45')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#D1C4E9">
+                    <p><strong>Translation:</strong> 合適的</p>
+                    <button class="back-btn" onclick="flipCard('card45')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+</div>
+<div class="card-container" id="T–Z">
+
+        <div class="card" id="card46">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#C5CAE9">
+                    <h2>46. Time-consuming</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Time-consuming&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card46')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#C5CAE9">
+                    <p><strong>Translation:</strong> 耗時的</p>
+                    <button class="back-btn" onclick="flipCard('card46')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card47">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#C5CAE9">
+                    <h2>47. Timeless</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Timeless&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card47')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#C5CAE9">
+                    <p><strong>Translation:</strong> 永恆的</p>
+                    <button class="back-btn" onclick="flipCard('card47')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card48">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#C5CAE9">
+                    <h2>48. Time-saving</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Time-saving&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card48')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#C5CAE9">
+                    <p><strong>Translation:</strong> 省時的</p>
+                    <button class="back-btn" onclick="flipCard('card48')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card49">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#C5CAE9">
+                    <h2>49. Traditional</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Traditional&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card49')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#C5CAE9">
+                    <p><strong>Translation:</strong> 傳統的</p>
+                    <button class="back-btn" onclick="flipCard('card49')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card50">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#C5CAE9">
+                    <h2>50. Unaffordable</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Unaffordable&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card50')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#C5CAE9">
+                    <p><strong>Translation:</strong> 價格昂貴的</p>
+                    <button class="back-btn" onclick="flipCard('card50')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card51">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#C5CAE9">
+                    <h2>51. Unappealing</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Unappealing&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card51')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#C5CAE9">
+                    <p><strong>Translation:</strong> 不吸引人的</p>
+                    <button class="back-btn" onclick="flipCard('card51')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card52">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#C5CAE9">
+                    <h2>52. Unattractive</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Unattractive&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card52')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#C5CAE9">
+                    <p><strong>Translation:</strong> 沒有吸引力的</p>
+                    <button class="back-btn" onclick="flipCard('card52')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card53">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#C5CAE9">
+                    <h2>53. Uninteresting</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Uninteresting&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card53')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#C5CAE9">
+                    <p><strong>Translation:</strong> 無趣的</p>
+                    <button class="back-btn" onclick="flipCard('card53')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card54">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#C5CAE9">
+                    <h2>54. Unsurprising</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Unsurprising&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card54')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#C5CAE9">
+                    <p><strong>Translation:</strong> 無驚喜的</p>
+                    <button class="back-btn" onclick="flipCard('card54')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card55">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#C5CAE9">
+                    <h2>55. Useful</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Useful&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card55')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#C5CAE9">
+                    <p><strong>Translation:</strong> 有用的</p>
+                    <button class="back-btn" onclick="flipCard('card55')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="card" id="card56">
+            <div class="card-inner">
+                <div class="card-front" style="background-color:#C5CAE9">
+                    <h2>56. Useless</h2>
+                    <button class="listen-btn" onclick="playAudio('https://dict.youdao.com/dictvoice?audio=Useless&type=2')">🔊 Listen</button>
+                    <button class="flip-btn" onclick="flipCard('card56')">Meaning</button>
+                </div>
+                <div class="card-back" style="background-color:#C5CAE9">
+                    <p><strong>Translation:</strong> 無用的</p>
+                    <button class="back-btn" onclick="flipCard('card56')">Back</button>
+                </div>
+            </div>
+        </div>
+        
+</div>
+
+<script>
+function playAudio(url) {
+    const audio = new Audio(url);
+    audio.play();
+}
+function flipCard(cardId) {
+    const card = document.getElementById(cardId);
+    card.classList.toggle('flipped');
+}
+function showGroup(groupId) {
+    const containers = document.querySelectorAll('.card-container');
+    containers.forEach(c => c.style.display = 'none');
+    document.getElementById(groupId).style.display = 'flex';
+}
+</script>
+
+</body></html>
